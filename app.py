@@ -26,7 +26,7 @@ if not ADMIN_ID:
 last_message_time = {}
 
 # Botu başlat
-app = Application.builder().token(TOKEN).build()
+app = Application.builder().token(BOT_TOKEN).build()
 
 # Kullanıcıları kaydetmek için bir set
 users = set()
@@ -327,8 +327,6 @@ async def unblock_user(update: Update, context: CallbackContext):
         await update.message.reply_text("🚫 Bu komutu sadece admin kullanabilir!")
 
 # Komutları ekleyelim
-app = Application.builder().token(BOT_TOKEN).build()
-
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("bilgi",bilgi))
 app.add_handler(CommandHandler("kurallar", kurallar))
