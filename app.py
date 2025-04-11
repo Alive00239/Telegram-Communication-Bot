@@ -327,6 +327,8 @@ async def unblock_user(update: Update, context: CallbackContext):
         await update.message.reply_text("🚫 Bu komutu sadece admin kullanabilir!")
 
 # Komutları ekleyelim
+app = Application.builder().token(BOT_TOKEN).build()
+
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("bilgi",bilgi))
 app.add_handler(CommandHandler("kurallar", kurallar))
