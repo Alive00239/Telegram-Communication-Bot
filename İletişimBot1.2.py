@@ -17,8 +17,10 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN environment variable not set")
 
-# Admin ID'nizi buraya yazın
-ADMIN_ID = 7694916627  
+# Admin ID'yi ortam değişkeninden al
+ADMIN_ID = os.getenv("ADMIN_ID")
+if not ADMIN_ID:
+    raise ValueError("ADMIN_ID environment variable not set")
 
 # Zaman kontrolü için kullanıcıların son mesaj zamanlarını saklar
 last_message_time = {}
